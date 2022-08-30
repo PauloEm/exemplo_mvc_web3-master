@@ -1,13 +1,21 @@
 <?php
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-//$uri_parse:analisa o URI da instância para garantir que tenha todas as partes necessárias para ser um URI válido.
+use App\Controller\
+{
+    PessoaController,
+    ProdutoController,
+    CategoriaController,
+};
 
-//echo $uri_parse;
-//echo "<hr />";
 
+
+
+
+
+include 'Controller/ProdutoController.php';
 include 'Controller/PessoaController.php';
-//include: inclui na pasta/caminho controller e dentro da pessoa/produto controller
+include 'Controller/CategoriaController.php';
 
 switch($uri_parse)
 {
